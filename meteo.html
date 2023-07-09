@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Météo</title>
+	<meta charset="utf-8" />
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	var callBackGetSuccess = function(data) {
+    console.log("donnees api", data)
+     var element = document.getElementById("zone_meteo");
+    element.innerHTML = "La temperature est de " + data.main.temp ;
+}
+function buttonClickGET() {
+    var queryLoc = document.getElementById("queryLoc").value;
+
+    var url = "https://api.openweathermap.org/data/2.5/weather?q="+queryLoc+"&appid=c21a75b667d6f7abb81f118dcf8d4611&units=metric"
+
+    $.get(url, callBackGetSuccess).done(function() {
+        
+      })
+      .fail(function() {
+        alert( "error" );
+      })
+      .always(function() {
+      });
+}function afficher() {
+document.getElementById('image').src='images/meteo.png';
+}
+ </script>
+</head>
+<body style="background-color:black;color:white">
+	<input id="queryLoc" type="text" value="Tunis,tn"/>
+    <button type="button"><img src="images/rech.png" alt="Image Facture" id="Image" onclick="buttonClickGET();afficher()" width="13" height="13"/> </button> 	 
+    <p id="zone_meteo"></p>
+    <img src="#" id="image" width="70" height="70"/> 
+    <br/>
+    <a href="acceuil.html" style="position: absolute;bottom: 20px;left:10px;">Retourner à l'Acceuil</a>
+</body>
+</html>

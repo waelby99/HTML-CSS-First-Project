@@ -1,0 +1,28 @@
+<?xml version ="1.0" encoding = "utf-8" standalone = "yes"?>
+<?xml-stylesheet href="CV.css" type="text/css" ?>
+
+<etudiant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsinoNamespaceSchemaLocation="SHCVWaelBenYoussef.xsd">
+	<introduction>
+		<nom>Wael</nom>
+		<prenom>BEN YOUSSEF</prenom>
+		<naissance>30-08-1999</naissance>
+		<tels>
+			<tel type="val1">96 859 155</tel>
+			<tel type="val2">58 413 667</tel>
+		</tels>
+		<mail>waelbenyoussef19991@gmail.com</mail>
+	</introduction>
+	<etudes>
+		<etude type="lycee">Baccalauréat En Mathématiques, Lycée Sokra, Ariana</etude>
+		<etude type="fac1">Licence Appliquée en Technologies de l'Informatique à ISET Charguia</etude>
+	</etudes>
+	<experience>Maintenance Informatique , Installation des Logiciels et Réparation des cartes élèctroniques à S2i	</experience>
+	<langues>Français Anglais Arabe</langues>
+	<competences>
+		
+		<comp>Maitrise des logiciels Excel , Power Point , Word . Maitrise également du HTML , CSS , JavaScript , XML , MATLAB , Pascal et C</comp>
+	</competences>
+	<interet>
+				Membre à AIESEC University
+	</interet>
+</etudiant>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inscription </title>
+	<meta charset="utf-8" />
+	<style>
+	h1
+	{
+		text-align:center;
+	}
+	</style>
+	<script>
+	function colorier(x,y){
+		x.style.background=y;
+		}
+	function Affichage()
+	{
+		let a=document.frm.Nom.value;
+		alert("Inscription réussie "+a+" !");
+	}	
+	</script>
+</head>
+<body>
+	<p><h1>S'inscrire à cet événement</h1></p>
+	<form name="frm">
+		Nom</br>
+		<input type="text" name="Nom" onfocus="colorier(this, '#037Ef3 ');"
+onblur= "colorier(this, '#CACCD1');"/></br>
+		Prenom</br>
+		<input type="text" name="Prenom" onfocus="colorier(this, '#037Ef3 ');"
+onblur= "colorier(this, '#CACCD1');"/></br>
+		Adresse E-mail</br>
+		<input type="email" name="email" onfocus="colorier(this, '#037Ef3 ');"
+onblur= "colorier(this, '#CACCD1');"/></br>
+		Mot De Passe</br>
+		<input type="password" name="Mot De Passe"onfocus="colorier(this, 'Yellow');"
+onblur= "colorier(this, 'Pink');"/> </br>
+		Date De Naissance</br>
+		Jour : <input type="number" name="days" min="1" max="31" onfocus="colorier(this, 'Aqua');"
+onblur= "colorier(this, '#F85A40');"/></br></br>
+		Mois : <input type="number" name="months" min="1" max="12" onfocus="colorier(this, 'Aqua');"
+onblur= "colorier(this, '#F85A40');"/></br></br>
+		Année:<input type="number" name="years" min="1900" max="2018" onfocus="colorier(this, 'Aqua');"
+onblur= "colorier(this, '#F85A40');"/></br><br>
+		<input type="radio" name="conditions d'utlisation" >J'accepte les conditions d'utilisation</br><br/>
+		<input type="submit" name="btnEnvoyer" value="Cliquer ici pour s'incrire" onclick="Affichage();"/></br></br>
+		<input type="reset" name="btnReset" value="Cliquer ici pour effacet tout les données"/></br></br>
+	</form>
+</body>
+</html>

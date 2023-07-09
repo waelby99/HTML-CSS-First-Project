@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wael Ben Youssef</title>
+	<link rel="shortcut icon" href="images/wa.ico"/>
+	<meta charset="utf-8" />
+	<style>
+	footer
+	{
+		display:flex;
+		justify-content: space-around;
+	}	
+	ul 
+	{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		display:flex;
+		justify-content: space-around;
+	}
+
+	li 
+	{
+		float: left;
+	}
+
+	li a 
+	{
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+		li a:hover 
+	{
+		background-color: #CACCD1;
+	}
+	body 
+	{
+
+		background-image:url(images/201603181624590.jpg);
+		background-size: cover; 
+	}
+	.m
+	{		
+		color:#F3F4F7;
+		text-align:center;
+		display:flex;
+		justify-content: space-around;
+		align-items:center;
+		flex-direction:row;
+	}
+	#fin
+	{
+		position : absolute;
+		bottom : 0px;
+	}
+	.pj
+	{
+		color:#F3F4F7;
+		font-weight:bold;
+		font-size:20px;
+	}			
+	</style>
+</head>
+
+<body>
+	<ul>
+	<div id="menu">
+		
+<li><a title="Biographie" class="c" href="bio.html" > BIO </a></li>
+<li><a title="Compétences" class="c" href="CVWaelBenYoussef.xml" > Compétences </a></li>
+<li><a title="Evenement" class="c" href="evenement.html" > Evenement </a></li>
+<li><a title="Contact" class="c" href="contact.html"> Contactez-Moi </a></li>
+<li><a title="Voir la météo" class="c" href="meteo.html">Météo</a></li>		
+
+	</ul>
+</header>
+	<footer>
+	<div id="fin" class="m">WAEL BEN YOUSSEF ©&nbsp; all rights are reserved</div>
+</footer>	
+</body>
+<p id="pi" class="pj"></p>
+<script>
+		let d =  new Date();
+		let a= d.getFullYear();
+		let j= d.getDate();
+		let jour = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+		let mois=["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Décembre"];
+		let numjour = d.getDay();
+		let nummois=d.getMonth();
+		document.getElementById("pi").innerHTML = `Aujourdhui est le  ${jour[numjour]} ${j} ${mois[nummois]} ${a}`;
+	</script>
+</html>

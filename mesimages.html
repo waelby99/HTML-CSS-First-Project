@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<title>Mes Images</title>
+<body>
+<script> 
+let delai = 1000  ,Numero = 0 ;
+tImage = new Array() ; //un tableau contenant les src des images sous la forme "image0.jpg" "image1.jpg"....
+ for(i = 0; i < 5; i++) 
+ { tImage[i] = "image" + i + ".jpg";} 
+ function animate()
+ {  document.images[0].src=tImage[Numero]; /*images[0] objet qui existe dans la page html de type image (1seule image)
+											si on a une autre balise img donc on l'accÃ¨de avec images[1]*/
+                                           
+    Numero++ ; 
+   if(Numero>= 5)
+   Numero = 0 ; 
+   }
+</script>
+<img id="animation" src="image0.jpg" onload="setTimeout('animate()', delai)" width="170" height="170">
+</body>
+</html>

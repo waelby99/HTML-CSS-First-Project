@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="etudiant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="introduction">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="nom"/>
+              <xs:element type="xs:string" name="prenom"/>
+              <xs:element type="xs:string" name="naissance"/>
+              <xs:element name="tels">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="tel" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="mail"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="etudes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="etude" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="type" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="experience"/>
+        <xs:element type="xs:string" name="langues"/>
+        <xs:element name="competences">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="comp"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="interet"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

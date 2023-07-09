@@ -1,0 +1,3 @@
+introduction,nom,prenom,langues,mail,naissance,tel,etude,experience,comp,interet{display:block;}
+nom,prenom{font-weight:bold;}
+langues,mail,nom,prenom,naissance,tel,etude,experience,comp,interet{color:blue;text-indent:5%;}
